@@ -43,5 +43,6 @@
     <Text Include="ClockSpeedLogs.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="FanSpeedLogs.txt" />
   </ItemGroup>
 </Project>

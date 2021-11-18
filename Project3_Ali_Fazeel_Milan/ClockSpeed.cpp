@@ -8,13 +8,13 @@ using namespace std;
 void ClockSpeed::setGPUClock(int GPUclockSpeed)
 {
 	this->GPUClock = GPUclockSpeed;
-	void logClockSpeed();
+	logClockSpeed(*this);
 }
 
 void ClockSpeed::setCPUClock(int CPUClockSpeed)
 {
 	this->CPUClock = CPUClockSpeed;
-	void logClockSpeed();
+	logClockSpeed(*this);
 }
 
 int ClockSpeed::getGPUClock(ClockSpeed mhz)
