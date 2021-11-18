@@ -149,6 +149,9 @@
     <ClInclude Include="FanSpeed.h" />
     <ClInclude Include="Temperature.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="ClockSpeedLogs.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

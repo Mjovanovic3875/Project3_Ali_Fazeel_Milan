@@ -1,0 +1,3 @@
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
