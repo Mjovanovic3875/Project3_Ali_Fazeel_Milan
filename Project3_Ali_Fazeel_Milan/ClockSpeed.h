@@ -6,6 +6,7 @@ class ClockSpeed
 {
 public:
 	int GPUClock;
+
 	int CPUClock;
 
 	void setGPUClock(int GPUclockSpeed);

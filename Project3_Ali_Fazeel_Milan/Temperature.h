@@ -1,23 +1,20 @@
 #pragma once
-class Temperature
+#include "FanSpeed.h"
+#include "ClockSpeed.h"
+
+class Temperature : FanSpeed, ClockSpeed
 {
 public:
 	
 	double CPUTemp;
+	
 	double GPUTemp;
-	int CPUFanSpeed;
-	int GPUFanspeed;
-	int GPUClock;
-	int CPUClock;
 
-	/*double calculateCPUTemp(int CPUFanSpeed, int CPUClock);
+	double calculateCPUTemp(int CPUFanSpeed, int CPUClock);
+	
 	double calculateGPUTemp(int CPUFanSpeed, int CPUClock);
-	void logTemp();*/
-
-
-
-
-
+	
+	void logTemp(Temperature sys);
 
 };
 
