@@ -44,5 +44,8 @@
       <Filter>Source Files</Filter>
     </Text>
     <Text Include="FanSpeedLogs.txt" />
+    <Text Include="TemperatureLogs.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
