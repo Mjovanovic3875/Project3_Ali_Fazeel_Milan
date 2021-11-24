@@ -36,6 +36,12 @@
     <ClCompile Include="Presets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lqc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rgb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Temperature.h">
@@ -56,6 +62,15 @@
     <ClInclude Include="Preset.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="lqc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rgb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ClockSpeedLogs.txt">
@@ -65,5 +80,7 @@
     <Text Include="TemperatureLogs.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="pump speed.txt" />
+    <Text Include="pumpSpeedRead.txt" />
   </ItemGroup>
 </Project>

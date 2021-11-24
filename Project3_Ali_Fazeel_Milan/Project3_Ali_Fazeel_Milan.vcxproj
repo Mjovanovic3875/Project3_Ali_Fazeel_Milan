@@ -141,23 +141,30 @@
   <ItemGroup>
     <ClCompile Include="ClockSpeed.cpp" />
     <ClCompile Include="FanSpeed.cpp" />
+    <ClCompile Include="lqc.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="Presets.cpp" />
+    <ClCompile Include="rgb.cpp" />
     <ClCompile Include="Storage.cpp" />
     <ClCompile Include="Temperature.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClockSpeed.h" />
     <ClInclude Include="FanSpeed.h" />
+    <ClInclude Include="lqc.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="Memory.h" />
     <ClInclude Include="Preset.h" />
+    <ClInclude Include="rgb.h" />
     <ClInclude Include="Storage.h" />
     <ClInclude Include="Temperature.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ClockSpeedLogs.txt" />
     <Text Include="FanSpeedLogs.txt" />
+    <Text Include="pump speed.txt" />
+    <Text Include="pumpSpeedRead.txt" />
     <Text Include="TemperatureLogs.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
