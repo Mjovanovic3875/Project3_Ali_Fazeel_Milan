@@ -4,6 +4,10 @@
 
 using namespace std;
 
+FanSpeed::FanSpeed() {
+	GPUFanSpeed = 0;
+	CPUFanSpeed = 0;
+}
 
 void FanSpeed::setGPUFanSpeed(int GPUFanSpeed)
 {

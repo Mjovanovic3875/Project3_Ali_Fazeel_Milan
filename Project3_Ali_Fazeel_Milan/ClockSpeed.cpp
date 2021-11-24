@@ -4,14 +4,18 @@
 
 using namespace std;
 
-
+ClockSpeed::ClockSpeed()
+{
+	GPUClock = 0;
+	CPUClock = 0;
+}
 void ClockSpeed::setGPUClock(int GPUclockSpeed)
 {
 	this->GPUClock = GPUclockSpeed;
 	logClockSpeed(*this);
 }
 
-void ClockSpeed::setCPUClock(int CPUClockSpeed)
+void ClockSpeed::setCPUClock(double CPUClockSpeed)
 {
 	this->CPUClock = CPUClockSpeed;
 	logClockSpeed(*this);
@@ -22,7 +26,7 @@ int ClockSpeed::getGPUClock(ClockSpeed mhz)
 	return mhz.GPUClock;
 }
 
-int ClockSpeed::getCPUClock(ClockSpeed mhz)
+double ClockSpeed::getCPUClock(ClockSpeed mhz)
 {
 	return mhz.CPUClock;
 }
