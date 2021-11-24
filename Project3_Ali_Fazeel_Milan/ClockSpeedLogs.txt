@@ -1,5 +1,98 @@
+GPU Clock Speed: 1900MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1900MHz 
+CPU Clock Speed: 3GHz
+
 GPU Clock Speed: 0MHz 
 CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1900MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 4GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 3GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 3.6GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 3.6GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 3.6GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 3.6GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 3.6GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 3.6GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 3.6GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 1500MHz 
+CPU Clock Speed: 3.6GHz
 
 GPU Clock Speed: 0MHz 
 CPU Clock Speed: 0GHz

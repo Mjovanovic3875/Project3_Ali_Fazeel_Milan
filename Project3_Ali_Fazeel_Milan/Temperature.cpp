@@ -2,33 +2,15 @@
 #include <iostream>
 #include <fstream>
 
-//different speeds of the CPUfan, measured in RPM
-static int fanOff = 0;
-static int CPUfan33Percent = 400;
-static int CPUfan50Percent = 600;
-static int CPUfan66Percent = 800;
-static int CPUfan100Percent = 1200;
-
-//different speeds of the CPU, measured in GHZ
-static int CPUClockBase = 3.6;
-static int CPUClockLightLoad = 3.8;
-static int CPUClockHeavyLoad = 4.1;
-
-//different speeds of GPU, measured in MHz
-static int GPUClockBase = 1500;
-static int GPUClockLightLoad = 1750;
-static int GPUClockHeavyLoad = 1900;
-
-//different speeds of the GPUfan, measured in RPM
-static int GPUfan25Percent = 475;
-static int GPUfan50Percent = 950;
-static int GPUfan75Percent = 1425;
-static int GPUfan100Percent = 1900;
-
 using namespace std;
 
 //calcualtes the CPU temperature based on the fanspeed and CPU clock speed
-double Temperature::calculateCPUTemp(int CPUFanSpeed, int CPUClock)
+
+Temperature::Temperature() {
+	GPUTemp = 0;
+	CPUTemp = 0;
+}
+double Temperature::calculateCPUTemp(int CPUFanSpeed, double CPUClock)
 {
 	int CPUTemp;
 

@@ -2,7 +2,7 @@
 #include "FanSpeed.h"
 #include "ClockSpeed.h"
 
-class Temperature : FanSpeed, ClockSpeed
+class Temperature : public FanSpeed, public ClockSpeed
 {
 public:
 	
@@ -10,9 +10,11 @@ public:
 	
 	double GPUTemp;
 
-	double calculateCPUTemp(int CPUFanSpeed, int CPUClock);
+	Temperature();
+
+	double calculateCPUTemp(int CPUFanSpeed, double CPUClock);
 	
-	double calculateGPUTemp(int CPUFanSpeed, int CPUClock);
+	double calculateGPUTemp(int GPUFanSpeed, int GPUClock);
 	
 	void logTemp(Temperature sys);
 
