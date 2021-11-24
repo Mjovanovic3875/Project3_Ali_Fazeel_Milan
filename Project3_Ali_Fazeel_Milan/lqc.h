@@ -15,7 +15,7 @@ public:
 	void pumpOn();
 	void pumpOff();
 	void setPumpSpeed(string speed);
-	string getPumpSpeed(int cpuTemp, int gpuTemp);
+	string getPumpSpeed(int cpuTemp);
 	string calcPumpSpeed(int temp);
 
 

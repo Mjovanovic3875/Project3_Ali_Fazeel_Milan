@@ -30,11 +30,9 @@ using namespace std;
 
 	//read from a file in get
 	// ---> create a random num gen to get a random pump speed
-	string lqc::getPumpSpeed(int cpuTemp, int gpuTemp) { //should call the calculate pump speed function (wich will also log after calculating) and then return the pump speed to the caller
-		int temp = cpuTemp + gpuTemp;
-		temp = temp / 2;
+	string lqc::getPumpSpeed(int cpuTemp) { //should call the calculate pump speed function (wich will also log after calculating) and then return the pump speed to the caller
 
-		pumpSpeed = calcPumpSpeed(temp);
+		pumpSpeed = calcPumpSpeed(cpuTemp);
 		return pumpSpeed;
 	}
 
@@ -51,6 +49,7 @@ using namespace std;
 		else {
 			cout << "temprature level critical\n";
 		}
+
 		setPumpSpeed(pumpSpeed);
 		return pumpSpeed;
 
