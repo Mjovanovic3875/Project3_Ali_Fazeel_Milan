@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e7b64f2a-5cc2-4baa-a94f-8f1818629060}</ProjectGuid>
-    <RootNamespace>Project3AliFazeelMilan</RootNamespace>
+    <ProjectGuid>{994e73df-34c6-4d34-9134-5f5dc5d951ca}</ProjectGuid>
+    <RootNamespace>researchproject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,13 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="lqc.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="research project.cpp" />
     <ClCompile Include="rgb.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="pump speed.txt" />
-    <Text Include="pumpSpeedRead.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

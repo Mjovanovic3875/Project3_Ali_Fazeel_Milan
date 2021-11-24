@@ -15,20 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="research project.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="rgb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lqc.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="pumpSpeedRead.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-    <Text Include="pump speed.txt" />
   </ItemGroup>
 </Project>
