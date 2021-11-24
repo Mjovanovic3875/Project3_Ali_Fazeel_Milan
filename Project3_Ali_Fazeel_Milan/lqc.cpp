@@ -2,20 +2,18 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include "lqc.h"
 
 using namespace std;
 
-class lqc {
-public:
-	string pumpSpeed;
-	bool pumpPower;
+
 	// code a constuctor
-	lqc() {
+	lqc::lqc() {
 		pumpOn();
 	}
 	
 	// write to a file in set
-	void setPumpSpeed(string speed) {
+	void lqc::setPumpSpeed(string speed) {
 		pumpSpeed = speed;
 
 		std::ofstream file;
@@ -32,7 +30,7 @@ public:
 
 	//read from a file in get
 	// ---> create a random num gen to get a random pump speed
-	string getPumpSpeed(int cpuTemp, int gpuTemp) { //should call the calculate pump speed function (wich will also log after calculating) and then return the pump speed to the caller
+	string lqc::getPumpSpeed(int cpuTemp, int gpuTemp) { //should call the calculate pump speed function (wich will also log after calculating) and then return the pump speed to the caller
 		int temp = cpuTemp + gpuTemp;
 		temp = temp / 2;
 
@@ -40,7 +38,7 @@ public:
 		return pumpSpeed;
 	}
 
-	string calcPumpSpeed(int temp) {
+	string lqc::calcPumpSpeed(int temp) {
 		if (150 > temp > 100) {
 			pumpSpeed = "1200";
 		}
@@ -59,10 +57,9 @@ public:
 
 	}
 
-	void pumpOn() {
+	void lqc::pumpOn() {
 		pumpPower = true;
 	}
-	void pumpOff() {
+	void lqc::pumpOff() {
 		pumpPower = false;
 	}
-};

@@ -31,4 +31,12 @@
     </Text>
     <Text Include="pump speed.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lqc.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rgb.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

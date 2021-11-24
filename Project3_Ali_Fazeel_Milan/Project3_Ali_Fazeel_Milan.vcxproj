@@ -147,6 +147,10 @@
     <Text Include="pump speed.txt" />
     <Text Include="pumpSpeedRead.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lqc.h" />
+    <ClInclude Include="rgb.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
