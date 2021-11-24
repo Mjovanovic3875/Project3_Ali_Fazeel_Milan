@@ -80,7 +80,6 @@
     <Text Include="TemperatureLogs.txt">
       <Filter>Source Files</Filter>
     </Text>
-    <Text Include="pump speed.txt" />
     <Text Include="pumpSpeedRead.txt" />
   </ItemGroup>
 </Project>

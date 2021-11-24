@@ -163,7 +163,6 @@
   <ItemGroup>
     <Text Include="ClockSpeedLogs.txt" />
     <Text Include="FanSpeedLogs.txt" />
-    <Text Include="pump speed.txt" />
     <Text Include="pumpSpeedRead.txt" />
     <Text Include="TemperatureLogs.txt" />
   </ItemGroup>
