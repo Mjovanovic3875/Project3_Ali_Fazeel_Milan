@@ -126,6 +126,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 clockSpeedObj.setCPUClock(CPUClockBase);
                 temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed,clockSpeedObj.CPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
             }
             else if (choice == 2)
             {
@@ -133,6 +134,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 clockSpeedObj.setCPUClock(CPUClockLightLoad);
                 temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
             }
             else if (choice == 3)
             {
@@ -140,6 +142,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 clockSpeedObj.setCPUClock(CPUClockHeavyLoad);
                 temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
             }
             break;
         case 2: // gpu clockspeed
@@ -155,6 +158,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 clockSpeedObj.setGPUClock(GPUClockBase);
                 temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
             }
             else if (choice == 2)
             {
@@ -162,6 +166,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 clockSpeedObj.setGPUClock(GPUClockLightLoad);
                 temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
             }
             else if (choice == 3)
             {
@@ -169,12 +174,91 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 clockSpeedObj.setGPUClock(GPUClockHeavyLoad);
                 temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
             }
 
             break;
         case 3: // cpu fan speed
+            cout << "1. 33% CPU fan speed - 400 RPM \n";
+            cout << "2. 50% CPU fan speed - 600 RPM\n";
+            cout << "3. 66% CPU fan speed - 800 RPM\n";
+            cout << "4. 100% CPU fan speed - 1200 RPM\n";
+            cout << "Please select a speed: ";
+            cin >> choice;
+
+            if (choice == 1)
+            {
+                temperatureObj.setCPUFanSpeed(CPUfan33Percent);
+                fanSpeedObj.setCPUFanSpeed(CPUfan33Percent);
+                temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
+                fanSpeedObj.logFanSpeed(fanSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
+            }
+            else if (choice == 2)
+            {
+                temperatureObj.setCPUFanSpeed(CPUfan50Percent);
+                fanSpeedObj.setCPUFanSpeed(CPUfan50Percent);
+                temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
+                fanSpeedObj.logFanSpeed(fanSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
+            }
+            else if (choice == 3)
+            {
+                temperatureObj.setCPUFanSpeed(CPUfan66Percent);
+                fanSpeedObj.setCPUFanSpeed(CPUfan66Percent);
+                temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
+                fanSpeedObj.logFanSpeed(fanSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
+            }
+            else if (choice == 4)
+            {
+                temperatureObj.setCPUFanSpeed(CPUfan100Percent);
+                fanSpeedObj.setCPUFanSpeed(CPUfan100Percent);
+                temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
+                fanSpeedObj.logFanSpeed(fanSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
+            }
             break;
         case 4: // gpu fan speed
+            cout << "1. 25% GPU fan speed - 400 RPM \n";
+            cout << "2. 50% GPU fan speed - 600 RPM\n";
+            cout << "3. 75% GPU fan speed - 800 RPM\n";
+            cout << "4. 100% GPU fan speed - 1200 RPM\n";
+            cout << "Please select a speed: ";
+            cin >> choice;
+
+            if (choice == 1)
+            {
+                temperatureObj.setGPUFanSpeed(GPUfan25Percent);
+                fanSpeedObj.setCPUFanSpeed(GPUfan25Percent);
+                temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
+                fanSpeedObj.logFanSpeed(fanSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
+            }
+            else if (choice == 2)
+            {
+                temperatureObj.setGPUFanSpeed(GPUfan50Percent);
+                fanSpeedObj.setGPUFanSpeed(GPUfan50Percent);
+                temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
+                fanSpeedObj.logFanSpeed(fanSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
+            }
+            else if (choice == 3)
+            {
+                temperatureObj.setGPUFanSpeed(GPUfan75Percent);
+                fanSpeedObj.setGPUFanSpeed(GPUfan75Percent);
+                temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
+                fanSpeedObj.logFanSpeed(fanSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
+            }
+            else if (choice == 4)
+            {
+                temperatureObj.setGPUFanSpeed(GPUfan100Percent);
+                fanSpeedObj.setGPUFanSpeed(GPUfan100Percent);
+                temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
+                fanSpeedObj.logFanSpeed(fanSpeedObj);
+                temperatureObj.logTemp(temperatureObj);
+            }
             break;
         case 5:
             storageObj.setStorageType();
