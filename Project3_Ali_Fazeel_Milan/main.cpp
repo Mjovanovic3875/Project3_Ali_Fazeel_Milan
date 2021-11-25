@@ -118,6 +118,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             cout << "2. Light load speeds - 3.8 GHz\n";
             cout << "3. Heavy load speeds - 4.1GHz\n";
             cout << "Please select a mode: ";
+            cin >> choice;
            
             if (choice == 1)
             {
@@ -146,7 +147,8 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             cout << "2. Light load speeds - 3.8 GHz\n";
             cout << "3. Heavy load speeds - 4.1GHz\n";
             cout << "Please select a speed: ";
-            
+            cin >> choice;
+
             if (choice == 1)
             {
                 temperatureObj.setGPUClock(GPUClockBase);
