@@ -80,16 +80,23 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
     do
     {
         system("cls");
-        cout << "CPU Information" << "               " << "GPU Information\n";
-        cout << "CPU Clock Speed: " << CPUTemp << "            " << "GPU Clock Speed: " << GPUTemp << "\n";
-        cout << "CPU Temperature: " << CPUTemp << "            " << "GPU Temperature: " << GPUTemp << "\n";
-        cout << "CPU Fan Speed: " << CPUTemp << "              " << "GPU Fan Speed: " << GPUTemp << "\n";
-        cout << "\n\n";
-        cout << "Storage Type: " << storageObj.getStorageType() << "                " << "Memory Type: " << memoryObj.getMemoryType() << "\n";
-        cout << "Storage Maximum Capacity: " << storageObj.getStorageMax() << "    " << "Memory Speed: " << memoryObj.getMemorySpeed() << "\n";
+        HWND console = GetConsoleWindow();
+        RECT r;
+        GetWindowRect(console, &r); 
+
+        MoveWindow(console, r.left, r.top,508, 500, TRUE); 
+
+        cout << "CPU Information" << "                     " << "GPU Information" << "\n";
+        cout << "---------------                     ---------------\n";
+        cout << "CPU Clock Speed: " << CPUTemp << " GHz" << "              " << "GPU Clock Speed: " << GPUTemp <<" MHz" << "\n\n";
+        cout << "CPU Temperature: " << CPUTemp << " C" << "                " << "GPU Temperature: " << GPUTemp << " C" << "\n\n";
+        cout << "CPU Fan Speed: " << CPUTemp << " RPM" << "                " << "GPU Fan Speed: " << GPUTemp << " RPM" << "\n\n";
+        cout << "\n";
+        cout << "Storage Type: " << storageObj.getStorageType() << "                      " << "Memory Type: " << memoryObj.getMemoryType() << "\n\n";
+        cout << "Storage Maximum Capacity: " << storageObj.getStorageMax() << "          " << "Memory Speed: " << memoryObj.getMemorySpeed() << "\n\n";
         cout << "Storage Speed: " << storageObj.getStorageSpeed() << "\n";
         cout << "\n";
-        cout << "__________________________________________________________________________________________\n";
+        cout << "___________________________________________________________\n";
         cout << "Please select any of the options to continue\n";
         cout << "1.Change CPU ClockSpeed\n";
         cout << "2.Change GPU ClockSpeed\n";
@@ -105,7 +112,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
         cin >> selection;
         switch (selection)
         {
-        case 1: // cpu clockspeed
+        case 1: // cpu clockspeed            
             break;
         case 2: // gpu clockspeed
             break;
