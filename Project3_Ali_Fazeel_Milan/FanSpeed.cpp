@@ -12,13 +12,11 @@ FanSpeed::FanSpeed() {
 void FanSpeed::setGPUFanSpeed(int GPUFanSpeed)
 {
 	this->GPUFanSpeed = GPUFanSpeed;
-	logFanSpeed(*this);
 }
 
 void FanSpeed::setCPUFanSpeed(int CPUFanSpeed)
 {
 	this->CPUFanSpeed = CPUFanSpeed;
-	logFanSpeed(*this);
 }
 
 int FanSpeed::getGPUFanSpeed(FanSpeed rpm)

@@ -11,14 +11,12 @@ ClockSpeed::ClockSpeed()
 }
 void ClockSpeed::setGPUClock(int GPUclockSpeed)
 {
-	this->GPUClock = GPUclockSpeed;
-	logClockSpeed(*this);
+	this->GPUClock = GPUclockSpeed;;
 }
 
 void ClockSpeed::setCPUClock(double CPUClockSpeed)
 {
 	this->CPUClock = CPUClockSpeed;
-	logClockSpeed(*this);
 }
 
 int ClockSpeed::getGPUClock(ClockSpeed mhz)
@@ -37,7 +35,7 @@ void ClockSpeed::logClockSpeed(ClockSpeed sys)
 
 	MyFile.open("ClockSpeedLogs.txt",fstream::app);
 	
-	MyFile << "GPU Clock Speed: " << sys.GPUClock << "MHz \nCPU Clock Speed: " << sys.CPUClock << "GHz\n\n" << flush;
+	MyFile << "GPU Clock Speed: " << sys.GPUClock << " MHz \nCPU Clock Speed: " << sys.CPUClock << " GHz\n\n" << flush;
 	
 	MyFile.close();
 }
