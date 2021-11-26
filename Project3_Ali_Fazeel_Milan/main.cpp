@@ -5,6 +5,7 @@
 #include "Memory.h"
 #include "Preset.h"
 #include "rgb.h"
+#include "lqc.h"
 
 using namespace std;
 void RGBMenu();
@@ -36,7 +37,77 @@ int main()
     selectMenu(GPUTemp, CPUTemp,clockSpeedObj,fanSpeedObj,temperatureObj,memoryObj,storageObj,ECO,HIGH);
     
 }
+void lqcMenu() {
+    int option;
+    lqc l;
+    do {
+        cout << "\nWelcome to the Cooling System!\n";
+        cout << "please select one of the options bellow\n";
+        cout << "1. Turn On Pump \n2. Turn Off Pump \n3. Set Pump Speed \n4. Get Pump Speed \n5. Quit to Previous Menu\n";
+        cin >> option;
 
+        if (option == 1) {
+            l.pumpOn();
+            l.setPumpSpeed("400");
+            cout << "pump turned on\n";
+        }
+        else if (option == 2) {
+            l.pumpOff();
+            l.setPumpSpeed("0");
+            cout << "pump turned off\n";
+        }
+        else if (option == 3) { // rework this so they have options
+            string speed;
+            cout << "please select a speed\n" << "\n1. 0% (0 rpm) \n2. 33% (400 rpm) \n3. 50% (600 rpm) \n4. 66% (800 rpm) \n5. 100% (1200 rpm) \n6. Quit to Previous Menu\n";
+            cin >> speed;
+            if (speed == "1") {
+                l.setPumpSpeed("0");
+                l.pumpOff();
+                cout << "The pump has been turned off\n";
+            }
+            else if (speed == "2") {
+                l.setPumpSpeed("400");
+                l.pumpOn();
+                cout << "Current Pump Speed is 33% (400rpm)\n";
+            }
+            else if (speed == "3") {
+                l.setPumpSpeed("600");
+                l.pumpOn();
+                cout << "Current Pump Speed is 50% (600rpm)\n";
+            }
+            else if (speed == "4") {
+                l.setPumpSpeed("800");
+                l.pumpOn();
+                cout << "Current Pump Speed is 66% (800rpm)\n";
+            }
+            else if (speed == "5") {
+                l.setPumpSpeed("1200");
+                l.pumpOn();
+                cout << "Current Pump Speed is 100% (1200rpm)\n";
+            }
+            else if (speed == "6") {
+
+            }
+            else {
+                cout << "Invalid entry detected. Please try again.\n";
+            }
+        }
+        else if (option == 4) {
+            //need cpu temprature :/
+            
+            string pumpSpeed;
+            pumpSpeed = l.getPumpSpeed(5);
+            cout << "The current pump speed is: " << pumpSpeed << " RPM";
+        }
+        /*   else if (option == 5) {
+               break;
+           }*/
+        else {
+            cout << "invalid entry. Please Try Again.\n";
+        }
+
+    } while (option != 5);
+}
 void RGBMenu() 
 {
     rgb r;
@@ -284,6 +355,8 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             }
             break;
         case 8: // cooling
+         
+            lqcMenu();
             break;
         case 9: // rgb
             RGBMenu();

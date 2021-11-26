@@ -1,4 +1,6 @@
 #include "Temperature.h"
+#include "FanSpeed.h"
+#include "ClockSpeed.h"
 #include <iostream>
 #include <fstream>
 

@@ -385,3 +385,105 @@ CPU Clock Speed: 0GHz
 GPU Clock Speed: 0MHz 
 CPU Clock Speed: 0GHz
 
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 3.6GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 3.6GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 3.6GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
+GPU Clock Speed: 0MHz 
+CPU Clock Speed: 0GHz
+
