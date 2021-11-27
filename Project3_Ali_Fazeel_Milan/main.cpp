@@ -32,7 +32,7 @@ int main()
     selectMenu(GPUTemp, CPUTemp,clockSpeedObj,fanSpeedObj,temperatureObj,memoryObj,storageObj,ECO,HIGH);
     
 }
-void lqcMenu() {
+void lqcMenu(ClockSpeed& clockSpeedObj, FanSpeed& fanSpeedObj, Temperature& temperatureObj) {
     int option;
     lqc l;
     do {
@@ -43,41 +43,48 @@ void lqcMenu() {
 
         if (option == 1) {
             l.pumpOn();
-            l.setPumpSpeed("400");
             cout << "pump turned on\n";
         }
         else if (option == 2) {
             l.pumpOff();
-            l.setPumpSpeed("0");
+            l.setPumpSpeed(0);
             cout << "pump turned off\n";
         }
-        else if (option == 3) { // rework this so they have options
+        else if (option == 3) {
             string speed;
             cout << "please select a speed\n" << "\n1. 0% (0 rpm) \n2. 33% (400 rpm) \n3. 50% (600 rpm) \n4. 66% (800 rpm) \n5. 100% (1200 rpm) \n6. Quit to Previous Menu\n";
             cin >> speed;
             if (speed == "1") {
-                l.setPumpSpeed("0");
                 l.pumpOff();
                 cout << "The pump has been turned off\n";
             }
             else if (speed == "2") {
-                l.setPumpSpeed("400");
+
                 l.pumpOn();
+                l.setPumpSpeed(400);
+                temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock);// third line is the one to add
+
                 cout << "Current Pump Speed is 33% (400rpm)\n";
             }
             else if (speed == "3") {
-                l.setPumpSpeed("600");
                 l.pumpOn();
+                l.setPumpSpeed(600);
+                temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock);// third line is the one to add
+
                 cout << "Current Pump Speed is 50% (600rpm)\n";
             }
             else if (speed == "4") {
-                l.setPumpSpeed("800");
                 l.pumpOn();
+                l.setPumpSpeed(800);
+                temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock);// third line is the one to add
+
                 cout << "Current Pump Speed is 66% (800rpm)\n";
             }
             else if (speed == "5") {
-                l.setPumpSpeed("1200");
                 l.pumpOn();
+                l.setPumpSpeed(1200);
+                temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock);// third line is the one to add
+
                 cout << "Current Pump Speed is 100% (1200rpm)\n";
             }
             else if (speed == "6") {
@@ -88,15 +95,15 @@ void lqcMenu() {
             }
         }
         else if (option == 4) {
-            //need cpu temprature :/
             
-            string pumpSpeed;
-            pumpSpeed = l.getPumpSpeed(5);
+            
+            int pumpSpeed;
+            pumpSpeed = l.getPumpSpeed();
             cout << "The current pump speed is: " << pumpSpeed << " RPM";
         }
-        /*   else if (option == 5) {
-               break;
-           }*/
+        else if (option == 5) {
+               
+        }
         else {
             cout << "invalid entry. Please Try Again.\n";
         }
@@ -258,7 +265,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             {
                 temperatureObj.setCPUFanSpeed(CPUfan33Percent);
                 fanSpeedObj.setCPUFanSpeed(CPUfan33Percent);
-                temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
+                temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);// third line is the one to add
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
             }
@@ -353,7 +360,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             break;
         case 8: // cooling
          
-            lqcMenu();
+            lqcMenu(clockSpeedObj, fanSpeedObj, temperatureObj);
             break;
         case 9: // rgb
             RGBMenu();

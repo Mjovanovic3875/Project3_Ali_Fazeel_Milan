@@ -8,15 +8,14 @@ using namespace std;
 
 class lqc {
 public:
-	string pumpSpeed;
+	int pumpSpeed;
 	bool pumpPower;
 
 	lqc();
 	void pumpOn();
 	void pumpOff();
-	void setPumpSpeed(string speed);
-	string getPumpSpeed(int cpuTemp);
-	string calcPumpSpeed(int temp);
+	void setPumpSpeed(int speed);
+	int getPumpSpeed();
 
 
 

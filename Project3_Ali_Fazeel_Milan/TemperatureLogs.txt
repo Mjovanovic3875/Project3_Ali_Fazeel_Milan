@@ -235,3 +235,9 @@ CPU Fan Speed: 0 C
 GPU Temeperature: 0 C 
 CPU Fan Speed: 0 C
 
+GPU Temeperature: 0 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 0 C 
+CPU Fan Speed: 100 C
+
