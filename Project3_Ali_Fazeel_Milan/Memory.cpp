@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "Memory.h"
 using namespace std;
 
@@ -10,7 +11,19 @@ void Memory:: setMemoryType() {
 		cout << "3. DDR3\n";
 		cout << "4. DDR4\n";
 		cout << "Please select the number for the type of RAM: ";
-		cin >> selection;
+
+		while (true)
+		{
+			cin >> selection;
+			if (!cin)
+			{
+				cout << "Invalid Input, Please select a valid input:  ";
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				continue;
+			}
+			else break;
+		}
 		if (selection == 1)
 		{
 			memoryType = "DDR";
@@ -28,6 +41,8 @@ void Memory:: setMemoryType() {
 			memoryType = "DDR4";
 		}
 	}
+
+
 	/*void setMemoryCapacity() {
 		if (memoryType == "DDR")
 		{
@@ -69,7 +84,18 @@ void Memory:: setMemorySpeed()
 		cout << "2. 333MHz\n";
 		cout << "3. 400MHz\n";
 		cout << "Please select the speed of the RAM: ";
-		cin >> selection;
+		while (true)
+		{
+			cin >> selection;
+			if (!cin)
+			{
+				cout << "Invalid Input, Please select a valid input:  ";
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				continue;
+			}
+			else break;
+		}
 		if (selection == 1)
 		{
 			memorySpeed = "266MHz";
@@ -90,7 +116,18 @@ void Memory:: setMemorySpeed()
 		cout << "2. 667MHz\n";
 		cout << "3. 800MHz\n";
 		cout << "Please select the speed of the RAM: ";
-		cin >> selection;
+		while (true)
+		{
+			cin >> selection;
+			if (!cin)
+			{
+				cout << "Invalid Input, Please select a valid input:  ";
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				continue;
+			}
+			else break;
+		}
 		if (selection == 1)
 		{
 			memorySpeed = "533MHz";
@@ -112,7 +149,18 @@ void Memory:: setMemorySpeed()
 		cout << "3. 1600MHz\n";
 		cout << "4. 1866MHz\n";
 		cout << "Please select the speed of the RAM: ";
-		cin >> selection;
+		while (true)
+		{
+			cin >> selection;
+			if (!cin)
+			{
+				cout << "Invalid Input, Please select a valid input:  ";
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				continue;
+			}
+			else break;
+		}
 		if (selection == 1)
 		{
 			memorySpeed = "1066MHz";
@@ -137,7 +185,18 @@ void Memory:: setMemorySpeed()
 		cout << "3. 2666MHz\n";
 		cout << "4. 3200MHz\n";
 		cout << "Please select the speed of the RAM: ";
-		cin >> selection;
+		while (true)
+		{
+			cin >> selection;
+			if (!cin)
+			{
+				cout << "Invalid Input, Please select a valid input:  ";
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				continue;
+			}
+			else break;
+		}
 
 		if (selection == 1)
 		{
@@ -168,5 +227,15 @@ string Memory:: getMemorySpeed()
 string Memory:: getMemoryType() 
 {
 	return memoryType;
+}
+void Memory::saveMemory(Memory memoryObj)
+{
+	fstream MyFile;
+
+	MyFile.open("MemoryData.txt", fstream::app);
+
+	MyFile << "Memory Type: " << memoryObj.getMemoryType() << " Memory Speed: " << memoryObj.getMemorySpeed() << "\n\n" << flush;
+
+	MyFile.close();
 }
 

@@ -4,3 +4,5 @@ CPU Fan Speed: 400RPM
 GPU Fan Speed: 475RPM 
 CPU Fan Speed: 400RPM
 
+
+

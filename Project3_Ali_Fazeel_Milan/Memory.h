@@ -16,5 +16,6 @@ public:
 	string getMemoryCapacity();
 	string getMemorySpeed();
 	string getMemoryType();
+	void saveMemory(Memory memoryObj);
 
 };

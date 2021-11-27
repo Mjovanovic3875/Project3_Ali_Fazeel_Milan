@@ -1,0 +1,4 @@
+Memory Type: DDR Memory Speed: 266MHz
+
+Memory Type: DDR3 Memory Speed: 1866MHz
+

@@ -22,13 +22,6 @@ int main()
     Memory memoryObj;
     Storage storageObj;
     
-    /*ECO.setECO(cstest, fstest, Ttest, memtest, stest, GPUTemp, CPUTemp);
-    cout << "CPU Clock Speed: " << cstest.getCPUClock(cstest) << " CPU Fan Speed: " << fstest.getCPUFanSpeed(fstest) << "\n";
-    cout << "GPU Clock Speed: " << cstest.getGPUClock(cstest) << " GPU Fan Speed: " << fstest.getGPUFanSpeed(fstest) << "\n";
-    cout << "GPU Temperature: " << GPUTemp << " CPU Temperature: " << CPUTemp << "\n";
-    cout << "Memory Type: " << memtest.getMemoryType() << " Memory Speed: " << memtest.getMemorySpeed() << "\n";
-    cout << "Storage Type: " << stest.getStorageType() << " Storage Max Capacity: " << stest.getStorageMax() << " Storage Speed: " << stest.getStorageSpeed() << "\n";*/
-
     selectMenu(GPUTemp, CPUTemp,clockSpeedObj,fanSpeedObj,temperatureObj,memoryObj,storageObj,ECO,HIGH);
     
 }
@@ -62,28 +55,28 @@ void lqcMenu(ClockSpeed& clockSpeedObj, FanSpeed& fanSpeedObj, Temperature& temp
 
                 l.pumpOn();
                 l.setPumpSpeed(400);
-                temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock);// third line is the one to add
+                temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
 
                 cout << "Current Pump Speed is 33% (400rpm)\n";
             }
             else if (speed == "3") {
                 l.pumpOn();
                 l.setPumpSpeed(600);
-                temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock);// third line is the one to add
+                temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
 
                 cout << "Current Pump Speed is 50% (600rpm)\n";
             }
             else if (speed == "4") {
                 l.pumpOn();
                 l.setPumpSpeed(800);
-                temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock);// third line is the one to add
+                temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
 
                 cout << "Current Pump Speed is 66% (800rpm)\n";
             }
             else if (speed == "5") {
                 l.pumpOn();
                 l.setPumpSpeed(1200);
-                temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock);// third line is the one to add
+                temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
 
                 cout << "Current Pump Speed is 100% (1200rpm)\n";
             }
@@ -164,8 +157,9 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
         cout << "CPU Clock Speed: " << clockSpeedObj.CPUClock << " GHz" << "              " << "GPU Clock Speed: " << clockSpeedObj.GPUClock <<" MHz" << "\n\n";
         cout << "CPU Temperature: " << temperatureObj.CPUTemp << " C" << "                " << "GPU Temperature: " << temperatureObj.GPUTemp << " C" << "\n\n";
         cout << "CPU Fan Speed: " << fanSpeedObj.getCPUFanSpeed(fanSpeedObj) << " RPM" << "                " << "GPU Fan Speed: " << fanSpeedObj.getGPUFanSpeed(fanSpeedObj) << " RPM" << "\n\n";
+        //cout << "Cooling Method: ";
         cout << "\n";
-        cout << "Storange Information" << "                 " << "Memory Information" << "\n";
+        cout << "Storage Information" << "                 " << "Memory Information" << "\n";
         cout << "------------------                   ------------------\n";
         cout << "Storage Type: " << storageObj.getStorageType() << "                      " << "Memory Type: " << memoryObj.getMemoryType() << "\n\n";
         cout << "Storage Maximum Capacity: " << storageObj.getStorageMax() << "          " << "Memory Speed: " << memoryObj.getMemorySpeed() << "\n\n";
@@ -343,6 +337,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
         case 6:
             memoryObj.setMemoryType();
             memoryObj.setMemorySpeed();
+            memoryObj.saveMemory(memoryObj);
             break;
         case 7:
             cout << "1. ECO mode\n";

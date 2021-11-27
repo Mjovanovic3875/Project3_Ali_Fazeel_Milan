@@ -11,7 +11,18 @@ void Storage::setStorageType()
 	cout << "1. Hard Disk Drive\n";
 	cout << "2. Solid State Drive\n";
 	cout << "Please select the number for the storage type: ";
-	cin >> selection;
+	while (true)
+	{
+		cin >> selection;
+		if (!cin)
+		{
+			cout << "Invalid Input, Please select a valid input:  ";
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			continue;
+		}
+		else break;
+	}
 		
 	if (selection == 1)
 	{
