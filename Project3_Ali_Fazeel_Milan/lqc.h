@@ -12,8 +12,8 @@ public:
 	bool pumpPower;
 
 	lqc();
-	void pumpOn();
-	void pumpOff();
+	bool pumpOn();
+	bool pumpOff();
 	void setPumpSpeed(int speed);
 	int getPumpSpeed();
 

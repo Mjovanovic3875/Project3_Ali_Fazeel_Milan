@@ -9,7 +9,7 @@
 
 using namespace std;
 void RGBMenu();
-void selectMenu(double& GPUTemp, double& CPUTemp, ClockSpeed& clockSpeedObj, FanSpeed& fanSpeedObj, Temperature& temperatureObj, Memory& memoryObj, Storage& storageObj, Presets& ECO, Presets& HIGH);
+void selectMenu(double& GPUTemp, double& CPUTemp, ClockSpeed& clockSpeedObj, FanSpeed& fanSpeedObj, Temperature& temperatureObj, Memory& memoryObj, Storage& storageObj, Presets& ECO, Presets& HIGH, lqc &lqcObj);
 
 int main()
 {
@@ -21,13 +21,13 @@ int main()
     Temperature temperatureObj;
     Memory memoryObj;
     Storage storageObj;
-    
-    selectMenu(GPUTemp, CPUTemp,clockSpeedObj,fanSpeedObj,temperatureObj,memoryObj,storageObj,ECO,HIGH);
+    lqc lqcObj;
+    selectMenu(GPUTemp, CPUTemp,clockSpeedObj,fanSpeedObj,temperatureObj,memoryObj,storageObj,ECO,HIGH, lqcObj);
     
 }
-void lqcMenu(ClockSpeed& clockSpeedObj, FanSpeed& fanSpeedObj, Temperature& temperatureObj) {
+void lqcMenu(ClockSpeed& clockSpeedObj, FanSpeed& fanSpeedObj, Temperature& temperatureObj,lqc &lqcObj) {
     int option;
-    lqc l;
+    
     do {
         cout << "\nWelcome to the Cooling System!\n";
         cout << "please select one of the options bellow\n";
@@ -35,12 +35,12 @@ void lqcMenu(ClockSpeed& clockSpeedObj, FanSpeed& fanSpeedObj, Temperature& temp
         cin >> option;
 
         if (option == 1) {
-            l.pumpOn();
+            lqcObj.pumpOn();
             cout << "pump turned on\n";
         }
         else if (option == 2) {
-            l.pumpOff();
-            l.setPumpSpeed(0);
+            lqcObj.pumpOff();
+            lqcObj.setPumpSpeed(0);
             cout << "pump turned off\n";
         }
         else if (option == 3) {
@@ -48,35 +48,35 @@ void lqcMenu(ClockSpeed& clockSpeedObj, FanSpeed& fanSpeedObj, Temperature& temp
             cout << "please select a speed\n" << "\n1. 0% (0 rpm) \n2. 33% (400 rpm) \n3. 50% (600 rpm) \n4. 66% (800 rpm) \n5. 100% (1200 rpm) \n6. Quit to Previous Menu\n";
             cin >> speed;
             if (speed == "1") {
-                l.pumpOff();
+                lqcObj.pumpOff();
                 cout << "The pump has been turned off\n";
             }
             else if (speed == "2") {
 
-                l.pumpOn();
-                l.setPumpSpeed(400);
-                temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
+                lqcObj.pumpOn();
+                lqcObj.setPumpSpeed(400);
+                temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(lqcObj.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
 
                 cout << "Current Pump Speed is 33% (400rpm)\n";
             }
             else if (speed == "3") {
-                l.pumpOn();
-                l.setPumpSpeed(600);
-                temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
+                lqcObj.pumpOn();
+                lqcObj.setPumpSpeed(600);
+                temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(lqcObj.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
 
                 cout << "Current Pump Speed is 50% (600rpm)\n";
             }
             else if (speed == "4") {
-                l.pumpOn();
-                l.setPumpSpeed(800);
-                temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
+                lqcObj.pumpOn();
+                lqcObj.setPumpSpeed(800);
+                temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(lqcObj.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
 
                 cout << "Current Pump Speed is 66% (800rpm)\n";
             }
             else if (speed == "5") {
-                l.pumpOn();
-                l.setPumpSpeed(1200);
-                temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(l.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
+                lqcObj.pumpOn();
+                lqcObj.setPumpSpeed(1200);
+                temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(lqcObj.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
 
                 cout << "Current Pump Speed is 100% (1200rpm)\n";
             }
@@ -91,7 +91,7 @@ void lqcMenu(ClockSpeed& clockSpeedObj, FanSpeed& fanSpeedObj, Temperature& temp
             
             
             int pumpSpeed;
-            pumpSpeed = l.getPumpSpeed();
+            pumpSpeed = lqcObj.getPumpSpeed();
             cout << "The current pump speed is: " << pumpSpeed << " RPM";
         }
         else if (option == 5) {
@@ -139,10 +139,24 @@ void RGBMenu()
         }
     } while ((colour != 1) && (colour != 2) && (colour != 3) && (colour != 4) && (colour != 5) && (colour != 6) && (colour != 7));
 }
+string checkMethod(lqc& lqcObj)
+{
+    string checkMethod;
 
-void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, FanSpeed &fanSpeedObj, Temperature &temperatureObj, Memory &memoryObj, Storage &storageObj, Presets &ECO, Presets &HIGH) {
+    if (lqcObj.pumpPower == true)
+    {
+        checkMethod = "Liquid Cooling";
+    }
+    else if (lqcObj.pumpPower == false)
+    {
+        checkMethod = "Air Cooling";
+    }
+    return checkMethod;
+}
+
+void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, FanSpeed &fanSpeedObj, Temperature &temperatureObj, Memory &memoryObj, Storage &storageObj, Presets &ECO, Presets &HIGH, lqc &lqcObj) {
     int selection;
-
+    string coolingMethod;
     do
     {
 
@@ -157,7 +171,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
         cout << "CPU Clock Speed: " << clockSpeedObj.CPUClock << " GHz" << "              " << "GPU Clock Speed: " << clockSpeedObj.GPUClock <<" MHz" << "\n\n";
         cout << "CPU Temperature: " << temperatureObj.CPUTemp << " C" << "                " << "GPU Temperature: " << temperatureObj.GPUTemp << " C" << "\n\n";
         cout << "CPU Fan Speed: " << fanSpeedObj.getCPUFanSpeed(fanSpeedObj) << " RPM" << "                " << "GPU Fan Speed: " << fanSpeedObj.getGPUFanSpeed(fanSpeedObj) << " RPM" << "\n\n";
-        //cout << "Cooling Method: ";
+        cout << "Cooling Method: " << (coolingMethod = checkMethod(lqcObj)) << "\n\n";
         cout << "\n";
         cout << "Storage Information" << "                 " << "Memory Information" << "\n";
         cout << "------------------                   ------------------\n";
@@ -262,6 +276,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);// third line is the one to add
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
+                lqcObj.pumpOff();
             }
             else if (choice == 2)
             {
@@ -270,6 +285,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
+                lqcObj.pumpOff();
             }
             else if (choice == 3)
             {
@@ -278,6 +294,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
+                lqcObj.pumpOff();
             }
             else if (choice == 4)
             {
@@ -286,6 +303,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
+                lqcObj.pumpOff();
             }
             break;
         case 4: // gpu fan speed
@@ -355,7 +373,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             break;
         case 8: // cooling
          
-            lqcMenu(clockSpeedObj, fanSpeedObj, temperatureObj);
+            lqcMenu(clockSpeedObj, fanSpeedObj, temperatureObj, lqcObj);
             break;
         case 9: // rgb
             RGBMenu();

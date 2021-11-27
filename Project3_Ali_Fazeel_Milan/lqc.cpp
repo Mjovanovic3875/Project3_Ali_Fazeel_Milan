@@ -50,11 +50,13 @@ using namespace std;
 
 	
 
-	void lqc::pumpOn() {
+	bool lqc::pumpOn() {
 		pumpPower = true;
 		setPumpSpeed(400);
+		return pumpPower;
 	}
-	void lqc::pumpOff() {
+	bool lqc::pumpOff() {
 		pumpPower = false;
 		setPumpSpeed(0);
+		return pumpPower;
 	}
