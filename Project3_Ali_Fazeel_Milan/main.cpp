@@ -283,7 +283,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             cout << "2. 50% CPU fan speed - 600 RPM\n";
             cout << "3. 66% CPU fan speed - 800 RPM\n";
             cout << "4. 100% CPU fan speed - 1200 RPM\n";
-            cout << "5. Turn GPU fan off\n";
+            cout << "5. Turn CPU fan off\n";
             cout << "6. Quit\n";
             cout << "Please select a speed: ";
             cin >> choice;

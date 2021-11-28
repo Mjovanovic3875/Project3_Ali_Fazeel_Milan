@@ -207,7 +207,7 @@ void Temperature::logTemp(Temperature sys)
 
 	MyFile.open("TemperatureLogs.txt", fstream::app);
 
-	MyFile << "GPU Temeperature: " << sys.GPUTemp <<  " C \nCPU Fan Speed: " << sys.CPUTemp << " C\n\n" << flush;
+	MyFile << "GPU Temeperature: " << sys.GPUTemp <<  " C \nCPU Temperature: " << sys.CPUTemp << " C\n\n" << flush;
 
 	MyFile.close();
 
