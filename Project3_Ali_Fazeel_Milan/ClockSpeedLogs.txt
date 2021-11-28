@@ -4,3 +4,12 @@ CPU Clock Speed: 3.6 GHz
 GPU Clock Speed: 0 MHz 
 CPU Clock Speed: 3.6 GHz
 
+GPU Clock Speed: 1500 MHz 
+CPU Clock Speed: 0 GHz
+
+GPU Clock Speed: 1500 MHz 
+CPU Clock Speed: 3.6 GHz
+
+GPU Clock Speed: 1500 MHz 
+CPU Clock Speed: 3.6 GHz
+

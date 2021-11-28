@@ -7,3 +7,12 @@ CPU Temperature: 55 C
 GPU Temeperature: 0 C 
 CPU Temperature: 101 C
 
+GPU Temeperature: 53 C 
+CPU Temperature: 0 C
+
+GPU Temeperature: 53 C 
+CPU Temperature: 60 C
+
+GPU Temeperature: 53 C 
+CPU Temperature: 60 C
+

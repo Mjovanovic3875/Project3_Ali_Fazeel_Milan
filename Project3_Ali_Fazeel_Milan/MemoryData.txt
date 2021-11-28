@@ -36,3 +36,7 @@ Memory Type: DDR4 Memory Speed:
 
 Memory Type:  Memory Speed: 
 
+Memory Type: DDR2 Memory Speed: 800MHz
+
+Memory Type: DDR2 Memory Speed: 800MHz
+

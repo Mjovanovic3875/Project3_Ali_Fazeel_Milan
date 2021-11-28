@@ -20,14 +20,18 @@ void Presets::setECO(ClockSpeed &ecoClock, FanSpeed &ecoFan, Temperature &myTemp
 	CPUTemp = myTemp.calculateCPUTemp(FanSpeed::getCPUFanSpeed(ecoFan), ClockSpeed::getCPUClock(ecoClock));
 	myTemp.GPUTemp = GPUTemp;
 	myTemp.CPUTemp = CPUTemp;
-
 	ecoMemory.memoryType = "DDR2";
 	ecoMemory.memorySpeed = "800MHz";
+	
 	ecoStorage.storageType = "Hard Disk Drive";
 	ecoStorage.setstorageMax();
 	ecoStorage.setstorageSpeed();
-	lqcObj.pumpOff();
-	
+	lqcObj.pumpOff();	
+
+	ecoClock.logClockSpeed(ecoClock);
+	ecoFan.logFanSpeed(ecoFan);
+	myTemp.logTemp(myTemp);
+	ecoMemory.saveMemory(ecoMemory);
 }
 void Presets::setHIGH(ClockSpeed& highClock, FanSpeed& highFan, Temperature& myTemp, Memory& highMemory, Storage& highStorage, double &GPUTemp, double &CPUTemp, lqc& lqcObj)
 {
@@ -46,5 +50,10 @@ void Presets::setHIGH(ClockSpeed& highClock, FanSpeed& highFan, Temperature& myT
 	highStorage.setstorageMax();
 	highStorage.setstorageSpeed();
 	lqcObj.pumpOn();
+
+	highClock.logClockSpeed(highClock);
+	highFan.logFanSpeed(highFan);
+	myTemp.logTemp(myTemp);
+	highMemory.saveMemory(highMemory);
 }
 //};
