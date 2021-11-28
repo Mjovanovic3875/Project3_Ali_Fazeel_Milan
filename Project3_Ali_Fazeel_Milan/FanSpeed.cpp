@@ -35,7 +35,7 @@ void FanSpeed::logFanSpeed(FanSpeed sys)
 
 	MyFile.open("FanSpeedLogs.txt", fstream::app);
 
-	MyFile << "GPU Fan Speed: " << sys.GPUFanSpeed << "RPM \nCPU Fan Speed: " << sys.CPUFanSpeed << "RPM\n\n" << flush;
+	MyFile << "GPU Fan Speed: " << sys.GPUFanSpeed << " RPM \nCPU Fan Speed: " << sys.CPUFanSpeed << " RPM\n\n" << flush;
 
 	MyFile.close();
 }

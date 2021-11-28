@@ -55,7 +55,7 @@ void lqcMenu(ClockSpeed& clockSpeedObj, FanSpeed& fanSpeedObj, Temperature& temp
 
                 lqcObj.pumpOn();
                 lqcObj.setPumpSpeed(400);
-                temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(lqcObj.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
+               temperatureObj.CPUTemp = (temperatureObj.calculateCPUTemp(lqcObj.pumpSpeed, clockSpeedObj.CPUClock)) + 1;// third line is the one to add
 
                 cout << "Current Pump Speed is 33% (400rpm)\n";
             }
@@ -216,6 +216,10 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed,clockSpeedObj.CPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
                 temperatureObj.logTemp(temperatureObj);
+                if (coolingMethod == "Liquid Cooling")
+                {
+                    temperatureObj.CPUTemp = temperatureObj.CPUTemp + 1;
+                }
 
             }
             else if (choice == 2)
@@ -225,6 +229,10 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
                 temperatureObj.logTemp(temperatureObj);
+                if (coolingMethod == "Liquid Cooling")
+                {
+                    temperatureObj.CPUTemp = temperatureObj.CPUTemp + 1;
+                }
             }
             else if (choice == 3)
             {
@@ -233,6 +241,10 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
                 temperatureObj.logTemp(temperatureObj);
+                if (coolingMethod == "Liquid Cooling")
+                {
+                    temperatureObj.CPUTemp = temperatureObj.CPUTemp + 1;
+                }
             }
             else if (choice == 4)
             {
@@ -423,10 +435,15 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             if (choice == 1)
             {
                 ECO.setECO(clockSpeedObj, fanSpeedObj, temperatureObj, memoryObj, storageObj, GPUTemp, CPUTemp, lqcObj);
+                menuSpacer = "     ";
+                menuSpacer2 = "   ";
             }
             else if (choice == 2)
             {
                 ECO.setHIGH(clockSpeedObj, fanSpeedObj, temperatureObj, memoryObj, storageObj, GPUTemp, CPUTemp, lqcObj);
+                menuSpacer = "     ";
+                menuSpacer2 = "   ";
+
             }
             else if (choice == 3)
             {

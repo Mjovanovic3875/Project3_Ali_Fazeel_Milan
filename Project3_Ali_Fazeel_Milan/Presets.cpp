@@ -29,7 +29,7 @@ void Presets::setECO(ClockSpeed &ecoClock, FanSpeed &ecoFan, Temperature &myTemp
 	lqcObj.pumpOff();
 	
 }
-void Presets:: setHIGH(ClockSpeed& highClock, FanSpeed& highFan, Temperature& myTemp, Memory& highMemory, Storage& highStorage, double &GPUTemp, double &CPUTemp, lqc& lqcObj)
+void Presets::setHIGH(ClockSpeed& highClock, FanSpeed& highFan, Temperature& myTemp, Memory& highMemory, Storage& highStorage, double &GPUTemp, double &CPUTemp, lqc& lqcObj)
 {
 	highClock.setGPUClock(GPUClockHeavyLoad);
 	highFan.setGPUFanSpeed(GPUfan100Percent);
