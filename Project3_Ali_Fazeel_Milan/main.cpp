@@ -215,12 +215,11 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 clockSpeedObj.setCPUClock(CPUClockBase);
                 temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed,clockSpeedObj.CPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
-                temperatureObj.logTemp(temperatureObj);
                 if (coolingMethod == "Liquid Cooling")
                 {
                     temperatureObj.CPUTemp = temperatureObj.CPUTemp + 1;
                 }
-
+                temperatureObj.logTemp(temperatureObj);
             }
             else if (choice == 2)
             {
@@ -228,11 +227,11 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 clockSpeedObj.setCPUClock(CPUClockLightLoad);
                 temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
-                temperatureObj.logTemp(temperatureObj);
                 if (coolingMethod == "Liquid Cooling")
                 {
                     temperatureObj.CPUTemp = temperatureObj.CPUTemp + 1;
                 }
+                temperatureObj.logTemp(temperatureObj);
             }
             else if (choice == 3)
             {
@@ -240,11 +239,11 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 clockSpeedObj.setCPUClock(CPUClockHeavyLoad);
                 temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
-                temperatureObj.logTemp(temperatureObj);
                 if (coolingMethod == "Liquid Cooling")
                 {
                     temperatureObj.CPUTemp = temperatureObj.CPUTemp + 1;
                 }
+                temperatureObj.logTemp(temperatureObj);
             }
             else if (choice == 4)
             {
@@ -304,7 +303,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             {
                 temperatureObj.setCPUFanSpeed(CPUfan33Percent);
                 fanSpeedObj.setCPUFanSpeed(CPUfan33Percent);
-                temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);// third line is the one to add
+                temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);// third line is the one to 
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
                 lqcObj.pumpOff();
