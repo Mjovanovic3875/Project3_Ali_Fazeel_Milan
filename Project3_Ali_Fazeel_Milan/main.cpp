@@ -253,7 +253,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
                 temperatureObj.logTemp(temperatureObj);
-                menuSpacer3 = "                   ";
+                menuSpacer3 = "                ";
             }
             else if (choice == 2)
             {
@@ -262,7 +262,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
                 temperatureObj.logTemp(temperatureObj);
-                menuSpacer3 = "                   ";
+                menuSpacer3 = "                ";
             }
             else if (choice == 3)
             {
@@ -271,7 +271,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
                 temperatureObj.logTemp(temperatureObj);
-                menuSpacer3 = "                   ";
+                menuSpacer3 = "                ";
             }
             else if (choice == 4)
             {
@@ -283,7 +283,8 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             cout << "2. 50% CPU fan speed - 600 RPM\n";
             cout << "3. 66% CPU fan speed - 800 RPM\n";
             cout << "4. 100% CPU fan speed - 1200 RPM\n";
-            cout << "5. Quit\n";
+            cout << "5. Turn GPU fan off\n";
+            cout << "6. Quit\n";
             cout << "Please select a speed: ";
             cin >> choice;
 
@@ -295,7 +296,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
                 lqcObj.pumpOff();
-                menuSpacer3 = "                  ";
+                menuSpacer3 = "               ";
             }
             else if (choice == 2)
             {
@@ -305,7 +306,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
                 lqcObj.pumpOff();
-                menuSpacer3 = "                  ";
+                menuSpacer3 = "               ";
             }
             else if (choice == 3)
             {
@@ -315,7 +316,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
                 lqcObj.pumpOff();
-                menuSpacer3 = "                  ";
+                menuSpacer3 = "               ";
             }
             else if (choice == 4)
             {
@@ -325,9 +326,19 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
                 lqcObj.pumpOff();
-                menuSpacer3 = "                  ";
+                menuSpacer3 = "               ";
             }
             else if (choice == 5)
+            {
+                temperatureObj.setCPUFanSpeed(0);
+                fanSpeedObj.setCPUFanSpeed(0);
+                temperatureObj.CPUTemp = temperatureObj.calculateCPUTemp(fanSpeedObj.CPUFanSpeed, clockSpeedObj.CPUClock);
+                temperatureObj.logTemp(temperatureObj);
+                fanSpeedObj.logFanSpeed(fanSpeedObj);
+                lqcObj.pumpOff();
+                menuSpacer3 = "                ";
+            }
+            else if (choice == 6)
             {
             }
             break;
@@ -336,7 +347,8 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             cout << "2. 50% GPU fan speed - 950 RPM\n";
             cout << "3. 75% GPU fan speed - 1425 RPM\n";
             cout << "4. 100% GPU fan speed - 1900 RPM\n";
-            cout << "5. Quit\n";
+            cout << "5. Turn GPU fan off\n";
+            cout << "6. Quit\n";
             cout << "Please select a speed: ";
             cin >> choice;
 
@@ -347,7 +359,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
-                menuSpacer3 = "                  ";
+                menuSpacer3 = "               ";
             }
             else if (choice == 2)
             {
@@ -356,7 +368,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
-                menuSpacer3 = "                  ";
+                menuSpacer3 = "               ";
             }
             else if (choice == 3)
             {
@@ -365,7 +377,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
-                menuSpacer3 = "                  ";
+                menuSpacer3 = "               ";
             }
             else if (choice == 4)
             {
@@ -374,9 +386,18 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
-                menuSpacer3 = "                  ";
+                menuSpacer3 = "               ";
             }
-            else if (choice == 5)
+            if (choice == 5)
+            {
+                temperatureObj.setGPUFanSpeed(0);
+                fanSpeedObj.setGPUFanSpeed(0);
+                temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
+                temperatureObj.logTemp(temperatureObj);
+                fanSpeedObj.logFanSpeed(fanSpeedObj);
+                menuSpacer3 = "                ";
+            }
+            else if (choice == 6)
             {
             }
             break;

@@ -17,10 +17,15 @@ double Temperature::calculateCPUTemp(int CPUFanSpeed, double CPUClock)
 	int CPUTemp;
 
 	//if the fans are off, the temperature is at max
-	if (CPUFanSpeed == fanOff)
+	if (CPUFanSpeed == fanOff && CPUClock != 0)
 	{
 		CPUTemp = 100;
 		return CPUTemp;
+	}
+	else if (CPUFanSpeed != fanOff && CPUClock == 0)
+	{
+		GPUTemp = 0;
+		return GPUTemp;
 	}
 	//if the fans are low, and CPU is running at base speeds
 	else if (CPUFanSpeed == CPUfan33Percent && CPUClock == CPUClockBase)
@@ -103,9 +108,14 @@ double Temperature::calculateGPUTemp(int GPUFanSpeed, int GPUClock)
 	int GPUTemp;
 
 	//if the fans are off, the temperature is at max
-	if (GPUFanSpeed == fanOff)
+	if (GPUFanSpeed == fanOff && GPUClock != 0)
 	{
 		GPUTemp = 90;
+		return GPUTemp;
+	}
+	else if (GPUFanSpeed != fanOff && GPUClock == 0)
+	{
+		GPUTemp = 0;
 		return GPUTemp;
 	}
 	//if the fans are low, and the clock is at base 
