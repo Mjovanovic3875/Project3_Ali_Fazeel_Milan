@@ -110,7 +110,7 @@ void RGBMenu()
     do
     {
         cout << "Please select a colour to change to\n";
-        cout << "1. Blue\n2. Green\n3. Cyan\n4. Red\n5. Purple\n6. Yellow\n7. White\n\n";
+        cout << "1. Blue\n2. Green\n3. Cyan\n4. Red\n5. Purple\n6. Yellow\n7. White\n 8.Quit\n";
         cin >> colour;
 
         if (colour == 1) {
@@ -133,6 +133,9 @@ void RGBMenu()
         }
         else if (colour == 7) {
             r.setColour(15);
+        }
+        else if (colour == 8) {
+            break;
         }
         else {
             cout << "Invalid Entry Please Try Again\n\n";
@@ -164,7 +167,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
         HWND console = GetConsoleWindow();
         RECT r;
         GetWindowRect(console, &r); 
-        MoveWindow(console, r.left, r.top,540, 520, TRUE); 
+        MoveWindow(console, r.left, r.top,540, 560, TRUE); 
 
         cout << "CPU Information" << "                        " << "GPU Information" << "\n";
         cout << "---------------                        ---------------\n";
@@ -199,6 +202,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             cout << "1. Idle speeds - 3.6 GHz\n";
             cout << "2. Light load speeds - 3.8 GHz\n";
             cout << "3. Heavy load speeds - 4.1GHz\n";
+            cout << "4. Quit\n";
             cout << "Please select a mode: ";
             cin >> choice;
            
@@ -227,11 +231,15 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
                 temperatureObj.logTemp(temperatureObj);
             }
+            else if (choice == 4)
+            {
+            }
             break;
         case 2: // gpu clockspeed
             cout << "1. Idle speeds - 1500 MHz\n";
             cout << "2. Light load speeds - 1750 GHz\n";
             cout << "3. Heavy load speeds - 1900 GHz\n";
+            cout << "4. Quit\n";
             cout << "Please select a speed: ";
             cin >> choice;
 
@@ -259,6 +267,9 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
                 temperatureObj.logTemp(temperatureObj);
             }
+            else if (choice == 4)
+            {
+            }
 
             break;
         case 3: // cpu fan speed
@@ -266,6 +277,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             cout << "2. 50% CPU fan speed - 600 RPM\n";
             cout << "3. 66% CPU fan speed - 800 RPM\n";
             cout << "4. 100% CPU fan speed - 1200 RPM\n";
+            cout << "5. Quit\n";
             cout << "Please select a speed: ";
             cin >> choice;
 
@@ -305,12 +317,16 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
                 lqcObj.pumpOff();
             }
+            else if (choice == 5)
+            {
+            }
             break;
         case 4: // gpu fan speed
             cout << "1. 25% GPU fan speed - 475 RPM \n";
             cout << "2. 50% GPU fan speed - 950 RPM\n";
             cout << "3. 75% GPU fan speed - 1425 RPM\n";
             cout << "4. 100% GPU fan speed - 1900 RPM\n";
+            cout << "5. Quit\n";
             cout << "Please select a speed: ";
             cin >> choice;
 
@@ -346,6 +362,9 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
             }
+            else if (choice == 5)
+            {
+            }
             break;
         case 5:
             storageObj.setStorageType();
@@ -360,6 +379,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
         case 7:
             cout << "1. ECO mode\n";
             cout << "2. High Performance mode\n";
+            cout << "3. Quit\n";
             cout << "Please select a mode: ";
             cin >> choice;
             if (choice == 1)
@@ -369,6 +389,9 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             else if (choice == 2)
             {
                 ECO.setHIGH(clockSpeedObj, fanSpeedObj, temperatureObj, memoryObj, storageObj, GPUTemp, CPUTemp);
+            }
+            else if (choice == 3)
+            {
             }
             break;
         case 8: // cooling

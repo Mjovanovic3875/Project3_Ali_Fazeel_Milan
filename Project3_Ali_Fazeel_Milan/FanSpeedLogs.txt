@@ -9,3 +9,9 @@ CPU Fan Speed: 400RPM
 GPU Fan Speed: 0RPM 
 CPU Fan Speed: 600RPM
 
+GPU Fan Speed: 0RPM 
+CPU Fan Speed: 800RPM
+
+GPU Fan Speed: 0RPM 
+CPU Fan Speed: 1200RPM
+

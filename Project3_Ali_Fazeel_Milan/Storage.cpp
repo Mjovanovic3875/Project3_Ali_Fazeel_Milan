@@ -10,6 +10,7 @@ void Storage::setStorageType()
 	cout << "Storage Type\n";
 	cout << "1. Hard Disk Drive\n";
 	cout << "2. Solid State Drive\n";
+	cout << "3. Quit\n";
 	cout << "Please select the number for the storage type: ";
 	while (true)
 	{
@@ -32,6 +33,10 @@ void Storage::setStorageType()
 	{
 		storageType = "Solid State Drive";
 	}
+	else
+	{
+
+	};
 }
 void Storage::setstorageMax() 
 {

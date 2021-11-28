@@ -10,6 +10,7 @@ void Memory:: setMemoryType() {
 		cout << "2. DDR2\n";
 		cout << "3. DDR3\n";
 		cout << "4. DDR4\n";
+		cout << "5. Quit\n";
 		cout << "Please select the number for the type of RAM: ";
 
 		while (true)
@@ -39,6 +40,10 @@ void Memory:: setMemoryType() {
 		else if (selection == 4)
 		{
 			memoryType = "DDR4";
+		}
+		else
+		{
+			
 		}
 	}
 
@@ -83,6 +88,7 @@ void Memory:: setMemorySpeed()
 		cout << "1. 266MHz\n";
 		cout << "2. 333MHz\n";
 		cout << "3. 400MHz\n";
+		cout << "4. Quit\n";
 		cout << "Please select the speed of the RAM: ";
 		while (true)
 		{
@@ -108,6 +114,10 @@ void Memory:: setMemorySpeed()
 		{
 			memorySpeed = "400MHz";
 		}
+		else
+		{
+			this->memoryType = "";
+		}
 		
 	}
 	if (memoryType == "DDR2")
@@ -115,6 +125,7 @@ void Memory:: setMemorySpeed()
 		cout << "1. 533MHz\n";
 		cout << "2. 667MHz\n";
 		cout << "3. 800MHz\n";
+		cout << "4. Quit\n";
 		cout << "Please select the speed of the RAM: ";
 		while (true)
 		{
@@ -140,6 +151,10 @@ void Memory:: setMemorySpeed()
 		{
 			memorySpeed = "800MHz";
 		}
+		else
+		{
+			this->memoryType = "";
+		}
 		
 	}
 	if (memoryType == "DDR3")
@@ -148,6 +163,7 @@ void Memory:: setMemorySpeed()
 		cout << "2. 1333MHz\n";
 		cout << "3. 1600MHz\n";
 		cout << "4. 1866MHz\n";
+		cout << "5. Quit\n";
 		cout << "Please select the speed of the RAM: ";
 		while (true)
 		{
@@ -177,6 +193,10 @@ void Memory:: setMemorySpeed()
 		{
 			memorySpeed = "1866MHz";
 		}
+		else
+		{
+			this->memoryType = "";
+		}
 	}
 	if (memoryType == "DDR4")
 	{
@@ -184,6 +204,7 @@ void Memory:: setMemorySpeed()
 		cout << "2. 2400MHz\n";
 		cout << "3. 2666MHz\n";
 		cout << "4. 3200MHz\n";
+		cout << "5. Quit\n";
 		cout << "Please select the speed of the RAM: ";
 		while (true)
 		{
@@ -213,6 +234,10 @@ void Memory:: setMemorySpeed()
 		else if (selection == 4)
 		{
 			memorySpeed = "3200MHz";
+		}
+		else
+		{
+			this->memoryType = "";
 		}
 	}
 }
