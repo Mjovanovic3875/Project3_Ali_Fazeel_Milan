@@ -24,3 +24,15 @@ Memory Type:  Memory Speed:
 
 Memory Type: DDR4 Memory Speed: 3200MHz
 
+Memory Type: DDR3 Memory Speed: 1866MHz
+
+Memory Type:  Memory Speed: 1866MHz
+
+Memory Type:  Memory Speed: 
+
+Memory Type:  Memory Speed: 
+
+Memory Type: DDR4 Memory Speed: 
+
+Memory Type:  Memory Speed: 
+

@@ -114,7 +114,7 @@ void Memory:: setMemorySpeed()
 		{
 			memorySpeed = "400MHz";
 		}
-		else
+		else  if (selection == 4)
 		{
 			this->memoryType = "";
 		}
@@ -151,7 +151,7 @@ void Memory:: setMemorySpeed()
 		{
 			memorySpeed = "800MHz";
 		}
-		else
+		else if (selection == 4)
 		{
 			this->memoryType = "";
 		}
@@ -193,7 +193,7 @@ void Memory:: setMemorySpeed()
 		{
 			memorySpeed = "1866MHz";
 		}
-		else
+		else if (selection == 5)
 		{
 			this->memoryType = "";
 		}
@@ -235,7 +235,7 @@ void Memory:: setMemorySpeed()
 		{
 			memorySpeed = "3200MHz";
 		}
-		else
+		else if (selection == 5)
 		{
 			this->memoryType = "";
 		}
