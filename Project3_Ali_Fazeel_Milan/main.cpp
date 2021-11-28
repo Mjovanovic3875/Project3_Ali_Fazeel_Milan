@@ -422,11 +422,11 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             cin >> choice;
             if (choice == 1)
             {
-                ECO.setECO(clockSpeedObj, fanSpeedObj, temperatureObj, memoryObj, storageObj, GPUTemp, CPUTemp);
+                ECO.setECO(clockSpeedObj, fanSpeedObj, temperatureObj, memoryObj, storageObj, GPUTemp, CPUTemp, lqcObj);
             }
             else if (choice == 2)
             {
-                ECO.setHIGH(clockSpeedObj, fanSpeedObj, temperatureObj, memoryObj, storageObj, GPUTemp, CPUTemp);
+                ECO.setHIGH(clockSpeedObj, fanSpeedObj, temperatureObj, memoryObj, storageObj, GPUTemp, CPUTemp, lqcObj);
             }
             else if (choice == 3)
             {
