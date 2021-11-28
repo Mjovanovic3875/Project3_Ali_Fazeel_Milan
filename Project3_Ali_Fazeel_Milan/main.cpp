@@ -240,8 +240,8 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             break;
         case 2: // gpu clockspeed
             cout << "1. Idle speeds - 1500 MHz\n";
-            cout << "2. Light load speeds - 1750 GHz\n";
-            cout << "3. Heavy load speeds - 1900 GHz\n";
+            cout << "2. Light load speeds - 1750 MHz\n";
+            cout << "3. Heavy load speeds - 1900 MHz\n";
             cout << "4. Quit\n";
             cout << "Please select a speed: ";
             cin >> choice;

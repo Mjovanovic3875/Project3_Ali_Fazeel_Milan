@@ -1,3 +1,6 @@
 GPU Temeperature: 0 C 
-CPU Fan Speed: 100 C
+CPU Temperature: 100 C
+
+GPU Temeperature: 0 C 
+CPU Temperature: 55 C
 

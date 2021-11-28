@@ -1,0 +1,3 @@
+GPU Fan Speed: 0RPM 
+CPU Fan Speed: 600RPM
+
