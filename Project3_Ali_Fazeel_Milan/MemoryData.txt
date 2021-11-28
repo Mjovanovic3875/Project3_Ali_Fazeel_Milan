@@ -22,3 +22,5 @@ Memory Type:  Memory Speed:
 
 Memory Type:  Memory Speed: 
 
+Memory Type: DDR4 Memory Speed: 3200MHz
+

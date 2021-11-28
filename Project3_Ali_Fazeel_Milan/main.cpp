@@ -160,9 +160,12 @@ string checkMethod(lqc& lqcObj)
 void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, FanSpeed &fanSpeedObj, Temperature &temperatureObj, Memory &memoryObj, Storage &storageObj, Presets &ECO, Presets &HIGH, lqc &lqcObj) {
     int selection;
     string coolingMethod;
+    string menuSpacer = "                      ";
+    string menuSpacer2 = "          ";
+    string menuSpacer3 = "                ";
     do
     {
-
+       
         int choice;
         HWND console = GetConsoleWindow();
         RECT r;
@@ -172,14 +175,14 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
         cout << "CPU Information" << "                        " << "GPU Information" << "\n";
         cout << "---------------                        ---------------\n";
         cout << "CPU Clock Speed: " << clockSpeedObj.CPUClock << " GHz" << "              " << "GPU Clock Speed: " << clockSpeedObj.GPUClock <<" MHz" << "\n\n";
-        cout << "CPU Temperature: " << temperatureObj.CPUTemp << " C" << "                " << "GPU Temperature: " << temperatureObj.GPUTemp << " C" << "\n\n";
+        cout << "CPU Temperature: " << temperatureObj.CPUTemp << " C" << menuSpacer3 << "GPU Temperature: " << temperatureObj.GPUTemp << " C" << "\n\n";
         cout << "CPU Fan Speed: " << fanSpeedObj.getCPUFanSpeed(fanSpeedObj) << " RPM" << "                " << "GPU Fan Speed: " << fanSpeedObj.getGPUFanSpeed(fanSpeedObj) << " RPM" << "\n\n";
         cout << "Cooling Method: " << (coolingMethod = checkMethod(lqcObj)) << "\n\n";
         cout << "\n";
         cout << "Storage Information" << "                 " << "Memory Information" << "\n";
-        cout << "------------------                   ------------------\n";
-        cout << "Storage Type: " << storageObj.getStorageType() << "                      " << "Memory Type: " << memoryObj.getMemoryType() << "\n\n";
-        cout << "Storage Maximum Capacity: " << storageObj.getStorageMax() << "          " << "Memory Speed: " << memoryObj.getMemorySpeed() << "\n\n";
+        cout << "------------------                  ------------------\n";
+        cout << "Storage Type: " << storageObj.getStorageType() << menuSpacer << "Memory Type: " << memoryObj.getMemoryType() << "\n\n";
+        cout << "Storage Maximum Capacity: " << storageObj.getStorageMax() << menuSpacer2 << "Memory Speed: " << memoryObj.getMemorySpeed() << "\n\n";
         cout << "Storage Speed: " << storageObj.getStorageSpeed() << "\n";
         cout << "\n";
         cout << "______________________________________________________________\n";
@@ -250,6 +253,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
                 temperatureObj.logTemp(temperatureObj);
+                menuSpacer3 = "                   ";
             }
             else if (choice == 2)
             {
@@ -258,6 +262,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
                 temperatureObj.logTemp(temperatureObj);
+                menuSpacer3 = "                   ";
             }
             else if (choice == 3)
             {
@@ -266,6 +271,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 clockSpeedObj.logClockSpeed(clockSpeedObj);
                 temperatureObj.logTemp(temperatureObj);
+                menuSpacer3 = "                   ";
             }
             else if (choice == 4)
             {
@@ -289,6 +295,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
                 lqcObj.pumpOff();
+                menuSpacer3 = "                  ";
             }
             else if (choice == 2)
             {
@@ -298,6 +305,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
                 lqcObj.pumpOff();
+                menuSpacer3 = "                  ";
             }
             else if (choice == 3)
             {
@@ -307,6 +315,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
                 lqcObj.pumpOff();
+                menuSpacer3 = "                  ";
             }
             else if (choice == 4)
             {
@@ -316,6 +325,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
                 lqcObj.pumpOff();
+                menuSpacer3 = "                  ";
             }
             else if (choice == 5)
             {
@@ -337,6 +347,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
+                menuSpacer3 = "                  ";
             }
             else if (choice == 2)
             {
@@ -345,6 +356,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
+                menuSpacer3 = "                  ";
             }
             else if (choice == 3)
             {
@@ -353,6 +365,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
+                menuSpacer3 = "                  ";
             }
             else if (choice == 4)
             {
@@ -361,6 +374,7 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
                 temperatureObj.GPUTemp = temperatureObj.calculateGPUTemp(fanSpeedObj.GPUFanSpeed, clockSpeedObj.GPUClock);
                 temperatureObj.logTemp(temperatureObj);
                 fanSpeedObj.logFanSpeed(fanSpeedObj);
+                menuSpacer3 = "                  ";
             }
             else if (choice == 5)
             {
@@ -370,6 +384,9 @@ void selectMenu(double &GPUTemp, double &CPUTemp, ClockSpeed &clockSpeedObj, Fan
             storageObj.setStorageType();
             storageObj.setstorageSpeed();
             storageObj.setstorageMax();
+            menuSpacer = "        ";
+            menuSpacer2 = "       ";
+
             break;
         case 6:
             memoryObj.setMemoryType();

@@ -259,3 +259,90 @@ CPU Fan Speed: 100 C
 GPU Temeperature: 0 C 
 CPU Fan Speed: -nan(ind) C
 
+GPU Temeperature: 0 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 77 C
+
+GPU Temeperature: 0 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 0 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 53 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 53 C 
+CPU Fan Speed: 60 C
+
+GPU Temeperature: 0 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 0 C 
+CPU Fan Speed: 94 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 94 C
+
+GPU Temeperature: 0 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 49 C
+
+GPU Temeperature: 0 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 49 C
+
+GPU Temeperature: 0 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 77 C
+
+GPU Temeperature: 0 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 77 C
+
+GPU Temeperature: 0 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 100 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 77 C
+
+GPU Temeperature: 90 C 
+CPU Fan Speed: 77 C
+

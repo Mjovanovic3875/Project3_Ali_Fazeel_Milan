@@ -16,3 +16,57 @@ CPU Clock Speed: 4.1 GHz
 GPU Clock Speed: 0 MHz 
 CPU Clock Speed: 4.1 GHz
 
+GPU Clock Speed: 0 MHz 
+CPU Clock Speed: 3.6 GHz
+
+GPU Clock Speed: 1900 MHz 
+CPU Clock Speed: 3.6 GHz
+
+GPU Clock Speed: 1900 MHz 
+CPU Clock Speed: 4.1 GHz
+
+GPU Clock Speed: 1900 MHz 
+CPU Clock Speed: 4.1 GHz
+
+GPU Clock Speed: 0 MHz 
+CPU Clock Speed: 3.6 GHz
+
+GPU Clock Speed: 1500 MHz 
+CPU Clock Speed: 3.6 GHz
+
+GPU Clock Speed: 0 MHz 
+CPU Clock Speed: 4.1 GHz
+
+GPU Clock Speed: 1900 MHz 
+CPU Clock Speed: 4.1 GHz
+
+GPU Clock Speed: 0 MHz 
+CPU Clock Speed: 3.6 GHz
+
+GPU Clock Speed: 1900 MHz 
+CPU Clock Speed: 3.6 GHz
+
+GPU Clock Speed: 0 MHz 
+CPU Clock Speed: 3.6 GHz
+
+GPU Clock Speed: 1900 MHz 
+CPU Clock Speed: 3.6 GHz
+
+GPU Clock Speed: 0 MHz 
+CPU Clock Speed: 4.1 GHz
+
+GPU Clock Speed: 1900 MHz 
+CPU Clock Speed: 4.1 GHz
+
+GPU Clock Speed: 0 MHz 
+CPU Clock Speed: 4.1 GHz
+
+GPU Clock Speed: 1900 MHz 
+CPU Clock Speed: 4.1 GHz
+
+GPU Clock Speed: 0 MHz 
+CPU Clock Speed: 4.1 GHz
+
+GPU Clock Speed: 1900 MHz 
+CPU Clock Speed: 4.1 GHz
+
